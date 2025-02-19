@@ -1,154 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facebook Signup</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f2f5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .container {
-            text-align: center;
-        }
-        .logo {
-            color: #1877f2;
-            font-size: 50px;
-            font-weight: bold;
-        }
-        .signup-box {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-            width: 360px;
-            text-align: left;
-        }
-        h2 {
-            margin: 0;
-            font-size: 20px;
-        }
-        p {
-            color: gray;
-            font-size: 14px;
-        }
-        .name-fields {
-            display: flex;
-            gap: 10px;
-        }
-        .name-fields input {
-            flex: 1;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        .dob-fields, .gender-fields {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 5px;
-        }
-        .dob-fields select {
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            width: 32%;
-        }
-        .gender-fields label {
-            flex: 1;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            text-align: center;
-            cursor: pointer;
-            margin-right: 5px;
-        }
-        .gender-fields input {
-            margin-right: 5px;
-        }
-        input[type="email"], input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-        .signup-btn {
-            width: 100%;
-            background-color: #42b72a;
-            color: white;
-            font-size: 18px;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            margin-top: 10px;
-            cursor: pointer;
-        }
-        .signup-btn:hover {
-            background-color: #36a420;
-        }
-        .login-link {
-            display: block;
-            text-align: center;
-            margin-top: 10px;
-            color: #1877f2;
-            font-size: 14px;
-            text-decoration: none;
-        }
-        .login-link:hover {
-            text-decoration: underline;
-        }
+      body {
+        background-color: #eeeeee;
+      }
+      .container {
+        background-color: white;
+        border-radius: 20px;
+        padding: 10px;
+        width: 400px;
+        margin: auto;
+      }
+      .row {
+        display: flex;
+        justify-content: center;
+      }
+      .title {
+        font-size: 30px;
+        margin-top: 30px;
+      }
+      .header {
+        font-size: 50px;
+        color: blue;
+        font-weight: bold;
+        font-family: verdana;
+      }
+      .caption {
+        font-size: 20px;
+        color: gray;
+        text-align: center;
+        margin-bottom: 5px;
+      }
+      input,
+      select {
+        width: 100%;
+        margin: 5px;
+        border-radius: 5px;
+        padding: 5px;
+        border: 1px solid gray;
+      }
+      button {
+        color: white;
+        background-color: green;
+        font-size: 20px;
+        padding: 5px;
+        border-radius: 2px;
+        width: 150px;
+        border: none;
+        margin: 5px;
+      }
+      .leftCaption {
+        color: gray;
+        margin-left: 5px;
+        font-size: 10px;
+      }
+      .qMark {
+        background-color: green;
+        border-radius: 5px;
+        color: white;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin: 2px;
+      }
+      .radioClass {
+        border: 1px solid gray;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: 5px;
+        border-radius: 5px;
+        padding: 3px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <h1 class="logo">facebook</h1>
-        <div class="signup-box">
-            <h2 style="text-align: center;">Create a new account</h2>
-            <p style="text-align: center;">It's quick and easy.</p>
-            <form>
-                <div class="name-fields">
-                    <input type="text" placeholder="First name" required>
-                    <input type="text" placeholder="Surname" required>
-                </div>
-
-                <label for="dob">Date of birth</label>
-                <div class="dob-fields">
-                    <select>
-                        <option>18</option>
-                    </select>
-                    <select>
-                        <option>Feb</option>
-                    </select>
-                    <select>
-                        <option>2025</option>
-                    </select>
-                </div>
-
-                <label for="gender">Gender</label>
-                <div class="gender-fields">
-                    <label><input type="radio" name="gender"> Female</label>
-                    <label><input type="radio" name="gender"> Male</label>
-                    <label><input type="radio" name="gender"> Custom</label>
-                </div>
-
-                <input type="email" placeholder="Mobile number or email address" required>
-                <input type="password" placeholder="New password" required>
-
-                <p class="info-text">People who use our service may have uploaded your contact information to Facebook. <a href="#">Learn more</a>.</p>
-
-                <p class="terms">By clicking Sign Up, you agree to our <a href="#">Terms</a>, <a href="#">Privacy Policy</a> and <a href="#">Cookies Policy</a>. You may receive SMS notifications from us and can opt out at any time.</p>
-
-                <button type="submit" class="signup-btn">Sign Up</button>
-            </form>
-
-            <a href="#" class="login-link">Already have an account?</a>
+      <div class="row">
+        <div class="header">facebook</div>
+      </div>
+      <div class="row">
+        <div>
+          <div class="title">Create a new account</div>
+          <div class="caption">It's quick and easy.</div>
         </div>
+      </div>
+      <hr />
+      <div id="root"></div>
     </div>
-</body>
+    <script>
+      const months=[
+           "Jan",
+           "Feb",
+           "Mar",
+           "Apr",
+           "May",
+           "Jun",
+           "Jul",
+           "Aug",
+           "Sep",
+           "Oct",
+           "Nov",
+           "Dec"
+          ];
+      const showData = () => {
+        let firstname = document.getElementById("firstname").value;
+        let surname = document.getElementById("surname").value;
+        let email = document.getElementById("email").value
+        let password = document.getElementById("password").value
+        let gender = document.getElementsByName("gender");
+        let pronoun = document.getElementById("prSelect").value
+        let day =  document.getElementById("day").value
+        let month =  document.getElementById("month").value
+        let year =  document.getElementById("year").value
+        let dob = `${day}-${month}-${year}`
+        let g = "";
+        if (gender[0].checked) g = "Female";
+        if (gender[1].checked) g = "Male";
+        if (gender[2].checked) g = pronoun;
+        let str = `
+        <div>
+          <h3> Verify your information</h3>
+          <p>Name:${firstname} ${surname}</p>
+          <p>Email:${email}</p>
+          <p>Password:${password}</p>
+          <p>Gender:${g}</p>
+          <p>Date of Birth:${dob}</p>
+          <button>Confirm</button>
+          <button>Edit</button>
+        </div>
+        `;
+        root.innerHTML = str;
+      };
+
+      const showForm = () => {
+        let str = `
+      
+      <div class="row">
+        <input type="text" id="firstname" placeholder="Firstname" />
+        <input type="text" id="surname" placeholder="Surname" />
+      </div>
+      <div class="row" style="justify-content: start">
+        <div class="leftCaption">
+          Date of Birth<span class="qMark"
+            ><abbr title="Click for more information">?</abbr></span
+          >
+        </div>
+      </div>
+      <div class="row">
+        <select id="day"></select>
+        <select id="month"></select>
+        <select id="year"></select>
+      </div>
+      <div class="row" style="justify-content: start">
+        <div class="leftCaption">
+          Gender<span class="qMark"
+            ><abbr title="Click for more information">?</abbr></span
+          >
+        </div>
+      </div>
+      <div class="row">
+        <div class="radioClass">
+          <div><label> Female</label></div>
+          <div><input type="radio" name="gender" onclick="togglePronoun()" /></div>
+        </div>
+        <div class="radioClass">
+          <div><label> Male</label></div>
+          <div><input type="radio" name="gender" onclick="togglePronoun()" /></div>
+        </div>
+        <div class="radioClass">
+          <div><label> Custom</label></div>
+          <div><input type="radio" name="gender" onclick="togglePronoun()" /></div>
+        </div>
+      </div>
+
+     <div class="row">
+      <select id="prSelect" style="display:none">
+        <option value="NA">Select your pronoun</option>
+        <option value="She">She:"Wish her a happy birthday"</option>
+        <option value="He">He:"Wish him a happy birthday"</option>
+        <option value="They">They:"Wish them a happy birthday"</option>
+      </select>
+     </div>
+
+      <div class="row">
+        <input type="text" id="email" placeholder="Mobule number or email address" />
+      </div>
+      <div class="row">
+        <input type="password" id="password" placeholder="New password" />
+      </div>
+      <div class="row">
+        <button onclick='showData()'>Sign Up</button>
+      </div>
+      `;
+        root.innerHTML = str;
+      };
+
+      showForm();
+      let str = "";
+      let dt=new Date()
+      let d=dt.getDate()
+      let m=dt.getMonth()
+      let y=dt.getFullYear()
+      for (let i = 1; i <= 31; i++) {
+        str += `<option ${i===d && "selected"}>${i}</option>`;
+      }
+      day.innerHTML = str;
+      str = "";
+      for (let i = 0; i <= 11; i++) {
+        str += `<option  ${i===m && "selected"}>${months[i]}</option>`;
+      }
+      month.innerHTML = str;
+      str = "";
+      for (let i = 1945; i <= 2025; i++) {
+        str += `<option  ${i===y && "selected"}>${i}</option>`;
+      }
+      year.innerHTML = str;
+
+      const togglePronoun = () => {
+        let p = document.getElementsByName("gender");
+        if (p[2].checked) {
+          prSelect.style.display = "block";
+        } else {
+          prSelect.style.display = "none";
+        }
+      };
+    </script>
+  </body>
 </html>

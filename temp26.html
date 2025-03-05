@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+        let users=[];
+        fetch("https://jsonplaceholder.typicode.com/users")
+        .then((res)=>res.json())
+        .then((data)=>{
+            users(data)
+            let str="";
+            data.map(value=>{
+                str += `<li>${value.name}-${value.email}</li>`
+            })
+            root.innerHTML = str
+        });
+        function showUsers(){
+            let str="";
+            users.map((value)=>{
+
+            })
+        }
+    </script>
+</body onclick="">
+</html>
